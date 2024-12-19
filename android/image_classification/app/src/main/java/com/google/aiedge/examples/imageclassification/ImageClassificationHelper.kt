@@ -117,8 +117,7 @@ class ImageClassificationHelper(
                 val rotation = -rotationDegrees / 90
                 val (_, h, w, _) = interpreter?.getInputTensor(0)?.shape() ?: return@withContext
                 val imageProcessor =
-                    ImageProcessor.Builder().add(ResizeOp(h, w, ResizeOp.ResizeMethod.BILINEAR))
-                        .add(Rot90Op(rotation)).add(NormalizeOp(224.0f, 224.0f)).build()
+                    ImageProcessor.Builder().add(ResizeOp(h, w, ResizeOp.ResizeMethod.BILINEAR)).add(NormalizeOp(224.0f, 224.0f)).build()
 
                 // Preprocess the image and convert it into a TensorImage for classification.
                 val tensorImage = imageProcessor.process(TensorImage.fromBitmap(bitmap))
