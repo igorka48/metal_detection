@@ -6,7 +6,7 @@ This is a camera app that continuously detects the objects (bounding boxes and
 classes) in the frames seen by your device's back camera, with the option to use
 a quantized
 
-![App example showing UI controls.](screenshot.png)
+![App example showing UI controls.](android/image_classification/UI.png)
 
 
 ## Build the demo using Android Studio
@@ -37,3 +37,4 @@ a quantized
 
 Downloading, extraction, and placing the models into the assets folder is
 managed automatically by the download.gradle file.
+
